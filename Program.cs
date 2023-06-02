@@ -19,7 +19,7 @@ class Program
                 books.Add(book);
             }
 
-            CsvMapping.WriteBooksToCsv(books, $"C:/Users/dell/Desktop/books_{DateTime.Now.ToString("dd-MM-yyyy")}.csv");
+            CsvMapping.WriteBooksToCsv(books, $"C:/Users/dell/Desktop/books_{DateTime.Now.ToString("dd-MM-yyyy HHmmss")}.csv");
         }
     }
 
