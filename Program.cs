@@ -9,7 +9,7 @@ class Program
     static async Task Main(string[] args)
     {
         {
-            List<string> listIsbn = GetInputFileList("ISBN_Input_File.txt");
+            List<string> listIsbn = GetInputFileList();
             List<Book> books = new List<Book>();
             var rowNumber = 1;
             foreach (var isbn in listIsbn)
@@ -24,9 +24,10 @@ class Program
     }
 
     public static Dictionary<string, Book> Cache = new Dictionary<string, Book>();
-    public static List<string> GetInputFileList(string fileName)
+    public static List<string> GetInputFileList()
     {
-        var filePath = Path.Combine(Environment.CurrentDirectory, fileName);
+        string filePath = @"C:/Users/dell/Desktop/ISBN_Input_File.txt";
+
         List<string> isbnList = new List<string>();
 
         if (File.Exists(filePath))
